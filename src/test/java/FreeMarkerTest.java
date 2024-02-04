@@ -24,7 +24,7 @@ public class FreeMarkerTest {
 		configuration.setDefaultEncoding("utf-8");
 
 		// 创建模板对象，加载指定模板
-		Template template = configuration.getTemplate("myweb.html.ftl");
+		Template template = configuration.getTemplate("myWeb.html.ftl");
 
 		// 数据模型
 		Map<String, Object> dataModel = new HashMap<>();
