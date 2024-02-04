@@ -23,6 +23,9 @@ public class FreeMarkerTest {
 		// 设置模板文件使用的字符集
 		configuration.setDefaultEncoding("utf-8");
 
+		// 设置数字格式化模板
+		configuration.setNumberFormat("0.######");
+
 		// 创建模板对象，加载指定模板
 		Template template = configuration.getTemplate("myWeb.html.ftl");
 
@@ -44,7 +47,7 @@ public class FreeMarkerTest {
 
 		dataModel.put("menuItems", menuItems);
 
-		Writer out = new FileWriter("myweb.html");
+		Writer out = new FileWriter("myWeb.html");
 
 		template.process(dataModel, out);
 
